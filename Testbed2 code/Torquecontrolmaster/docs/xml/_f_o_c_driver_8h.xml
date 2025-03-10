@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="_f_o_c_driver_8h" kind="file" language="C++">
+    <compoundname>FOCDriver.h</compoundname>
+    <includes local="no">ACAN_T4.h</includes>
+    <includes local="no">Arduino.h</includes>
+    <includedby refid="_f_o_c_driver_8cpp" local="yes">src/FOCDriver.cpp</includedby>
+    <includedby refid="main_8cpp" local="yes">src/main.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>ACAN_T4.h</label>
+      </node>
+      <node id="3">
+        <label>Arduino.h</label>
+      </node>
+      <node id="1">
+        <label>src/FOCDriver.h</label>
+        <link refid="_f_o_c_driver_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>src/FOCDriver.cpp</label>
+        <link refid="_f_o_c_driver_8cpp"/>
+      </node>
+      <node id="1">
+        <label>src/FOCDriver.h</label>
+        <link refid="_f_o_c_driver_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structvariable" prot="public">variable</innerclass>
+    <innerclass refid="class_f_o_c_driver" prot="public">FOCDriver</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;ACAN_T4.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Arduino.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="structvariable" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structvariable" kindref="compound">variable</ref><sp/>{</highlight></codeline>
+<codeline lineno="5" refid="structvariable_1a1cc00167b79441eb496fba24038d850c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structvariable_1a1cc00167b79441eb496fba24038d850c" kindref="member">value</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="6" refid="structvariable_1a7f923c464ea523a389870a73bf89af24" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="structvariable_1a7f923c464ea523a389870a73bf89af24" kindref="member">lastUpdate</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="class_f_o_c_driver" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_f_o_c_driver" kindref="compound">FOCDriver</ref><sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">private<sp/>:<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>CAN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>ACAN_T4*<sp/>CAN;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>ID<sp/>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>maxTemp<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>maxCurrent<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>polePairs<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>resistance<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>TorqueConstant<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>motor<sp/>state</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structvariable" kindref="compound">variable</ref><sp/>alpha;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structvariable" kindref="compound">variable</ref><sp/>beta;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structvariable" kindref="compound">variable</ref><sp/>alphaVelocity;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structvariable" kindref="compound">variable</ref><sp/>betaVelocity;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structvariable" kindref="compound">variable</ref><sp/>temp;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structvariable" kindref="compound">variable</ref><sp/>targetForce;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>methods</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>sendMessage(uint8_t<sp/>service_id,<sp/>uint8_t<sp/>sub_service_id,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>data);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>sendMessage(uint8_t<sp/>service_id,<sp/>uint8_t<sp/>sub_service_id,<sp/>uint8_t<sp/>data);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>sendMessage(uint8_t<sp/>service_id,<sp/>uint8_t<sp/>sub_service_id);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>constructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_f_o_c_driver_1a58ee55ef00db62cc4918a5de6f72fdba" kindref="member">FOCDriver</ref>();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_f_o_c_driver_1a58ee55ef00db62cc4918a5de6f72fdba" kindref="member">FOCDriver</ref>(ACAN_T4*<sp/>_CAN,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_ID);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>methods</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_f_o_c_driver_1a4db49a5d5f4db50229d42f0ff91f633a" kindref="member">init</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>resistance,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>polePairs,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>TorqueConstant);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_f_o_c_driver_1a01fbf2f5d270b96fc3fe131838bc4837" kindref="member">run</ref>();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_f_o_c_driver_1ab3aa9617cfa31896d90bfe76887c0e6f" kindref="member">setAlpha</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>alpha);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_f_o_c_driver_1ad18066d1a1d2e7e514a0f4ff97e67b4d" kindref="member">setTargetForce</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>targetForce);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_f_o_c_driver_1a60a4b4cf21dc117a981268ce7e1fad65" kindref="member">setMaxTemp</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>maxTemp);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_f_o_c_driver_1a0a28c59208c3ac68bf93bc9a6c72cb5e" kindref="member">setMaxCurrent</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>maxCurrent);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_f_o_c_driver_1a7b4785d15a3f72e824b1ee9f67bc4baf" kindref="member">setMotorParams</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>polePairs,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>resistance,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>TorqueConstant);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_f_o_c_driver_1acfc1cdf72d4797ccee6e06d9c3275955" kindref="member">getAlpha</ref>();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_f_o_c_driver_1a21f0cccda9de64867a2406be9118609f" kindref="member">getBeta</ref>();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_f_o_c_driver_1a513c44a5e190f833b0d87e55fbd129ec" kindref="member">getAlphaVelocity</ref>();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_f_o_c_driver_1aa7ca59c78c21fbf4f852b3bb700bb82c" kindref="member">getBetaVelocity</ref>();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_f_o_c_driver_1a01e4c37945f0cd0b95a8cceea9ea5c1e" kindref="member">getTargetForce</ref>();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_f_o_c_driver_1ada27a8bb717c2010d22c06877f240688" kindref="member">getMaxTemp</ref>();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_f_o_c_driver_1aedd914e33e1a5a60281ba8af6dfafa2d" kindref="member">getMaxCurrent</ref>();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_f_o_c_driver_1a45948110b2ad223aa20a1c05ba36bd23" kindref="member">getPolePairs</ref>();</highlight></codeline>
+<codeline lineno="62" refid="class_f_o_c_driver_1ac0e0183bf65c6d87557a5069a47e50bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_f_o_c_driver_1ac0e0183bf65c6d87557a5069a47e50bf" kindref="member">getResistance</ref>();</highlight></codeline>
+<codeline lineno="63" refid="class_f_o_c_driver_1a9993ed73aab32e075815a338ec03e361" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_f_o_c_driver_1a9993ed73aab32e075815a338ec03e361" kindref="member">getTorqueConstant</ref>();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_f_o_c_driver_1af491dbbbaa68da53da813c03a9f3425d" kindref="member">updateAlpha</ref>();</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_f_o_c_driver_1aafabae9c6391883fcc2cec90630edc7b" kindref="member">updateBeta</ref>();</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_f_o_c_driver_1a8d0e3027ef04ecb52f148dee5dd947d4" kindref="member">updateTemp</ref>();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_f_o_c_driver_1abc0ed6d07f1a69ec1779bf773911bbaf" kindref="member">updateAlphaVelocity</ref>();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_f_o_c_driver_1a44e69da278198f0f525e184ef19d3838" kindref="member">updateBetaVelocity</ref>();</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="src/FOCDriver.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="main_8cpp" kind="file" language="C++">
+    <compoundname>main.cpp</compoundname>
+    <includes local="no">Arduino.h</includes>
+    <includes local="no">ACAN_T4.h</includes>
+    <includes refid="_f_o_c_driver_8h" local="yes">FOCDriver.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>ACAN_T4.h</label>
+      </node>
+      <node id="2">
+        <label>Arduino.h</label>
+      </node>
+      <node id="4">
+        <label>FOCDriver.h</label>
+        <link refid="_f_o_c_driver_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/main.cpp</label>
+        <link refid="main_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="main_8cpp_1aeeb86238c49ed5c1d37773005d52b5c9" prot="public" static="yes" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t gBlinkDate</definition>
+        <argsstring></argsstring>
+        <name>gBlinkDate</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main.cpp" line="11" column="17" bodyfile="src/main.cpp" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1a51fa040131b5a58cf457a7d508c4033d" prot="public" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t SEND_COUNT</definition>
+        <argsstring></argsstring>
+        <name>SEND_COUNT</name>
+        <initializer>= 50 * 1000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main.cpp" line="13" column="23" bodyfile="src/main.cpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="main_8cpp_1a28d603fc7c9857d891b759e57280ddce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init_CAN</definition>
+        <argsstring>()</argsstring>
+        <name>init_CAN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main.cpp" line="53" column="6" bodyfile="src/main.cpp" bodystart="53" bodyend="98" declfile="src/main.cpp" declline="17" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a4fc01d736fe50cf5b977f755b675f11d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setup</definition>
+        <argsstring>()</argsstring>
+        <name>setup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main.cpp" line="19" column="6" bodyfile="src/main.cpp" bodystart="19" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1afe461d27b9c48d5921c00d521181f12f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void loop</definition>
+        <argsstring>()</argsstring>
+        <name>loop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main.cpp" line="35" column="6" bodyfile="src/main.cpp" bodystart="35" bodyend="50"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//-----------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Arduino.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ACAN_T4.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_f_o_c_driver_8h" kindref="compound">FOCDriver.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><ref refid="class_f_o_c_driver" kindref="compound">FOCDriver</ref><sp/>driver1(&amp;ACAN_T4::can3,<sp/>1);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><ref refid="class_f_o_c_driver" kindref="compound">FOCDriver</ref><sp/>driver2(&amp;ACAN_T4::can3,<sp/>2);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//-----------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint32_t<sp/>gBlinkDate<sp/>=<sp/>0<sp/>;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/>SEND_COUNT<sp/>=<sp/>50<sp/>*<sp/>1000<sp/>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//-----------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a28d603fc7c9857d891b759e57280ddce" kindref="member">init_CAN</ref>();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a4fc01d736fe50cf5b977f755b675f11d" kindref="member">setup</ref><sp/>()<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>pinMode<sp/>(LED_BUILTIN,<sp/>OUTPUT)<sp/>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>Serial.begin<sp/>(115200)<sp/>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!Serial)<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>delay<sp/>(50)<sp/>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite<sp/>(LED_BUILTIN,<sp/>!digitalRead<sp/>(LED_BUILTIN))<sp/>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a28d603fc7c9857d891b759e57280ddce" kindref="member">init_CAN</ref>();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//-----------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1afe461d27b9c48d5921c00d521181f12f" kindref="member">loop</ref><sp/>()<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(gBlinkDate<sp/>&lt;=<sp/>millis<sp/>())<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>gBlinkDate<sp/>+=<sp/>1000<sp/>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite<sp/>(LED_BUILTIN,<sp/>!digitalRead<sp/>(LED_BUILTIN))<sp/>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print<sp/>(</highlight><highlight class="stringliteral">&quot;,<sp/>CAN3:<sp/>&quot;</highlight><highlight class="normal">)<sp/>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print<sp/>(</highlight><highlight class="stringliteral">&quot;<sp/>/<sp/>0x&quot;</highlight><highlight class="normal">)<sp/>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print<sp/>(ACAN_T4::can3.transmitBufferCount(),<sp/>HEX)<sp/>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print<sp/>(</highlight><highlight class="stringliteral">&quot;<sp/>/<sp/>&quot;</highlight><highlight class="normal">)<sp/>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.println<sp/>(ACAN_T4::can3.receiveBufferPeakCount<sp/>())<sp/>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.println(driver1.setTargetForce(1));</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//driver2.setTargetForce(2);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//driver1.run();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//driver2.run();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a28d603fc7c9857d891b759e57280ddce" kindref="member">init_CAN</ref>(){</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>ACAN_T4_Settings<sp/>settings<sp/>(1000*1000)<sp/>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>settings.mTxPinIsOpenCollector<sp/>=<sp/>false<sp/>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>settings.mRxPinConfiguration<sp/>=<sp/>ACAN_T4_Settings::PULLUP_22k<sp/>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>settings.mLoopBackMode<sp/>=<sp/>false<sp/>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>settings.mSelfReceptionMode<sp/>=<sp/>false<sp/>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>Serial.print<sp/>(</highlight><highlight class="stringliteral">&quot;CAN<sp/>Root<sp/>Clock<sp/>frequency:<sp/>&quot;</highlight><highlight class="normal">)<sp/>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>Serial.print<sp/>(getCANRootClockFrequency<sp/>())<sp/>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>Serial.println<sp/>(</highlight><highlight class="stringliteral">&quot;<sp/>Hz&quot;</highlight><highlight class="normal">)<sp/>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>Serial.print<sp/>(</highlight><highlight class="stringliteral">&quot;CAN<sp/>Root<sp/>Clock<sp/>divisor:<sp/>&quot;</highlight><highlight class="normal">)<sp/>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>Serial.println<sp/>(getCANRootClockDivisor<sp/>())<sp/>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>Serial.print<sp/>(</highlight><highlight class="stringliteral">&quot;Bitrate<sp/>prescaler:<sp/>&quot;</highlight><highlight class="normal">)<sp/>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>Serial.println<sp/>(settings.mBitRatePrescaler)<sp/>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>Serial.print<sp/>(</highlight><highlight class="stringliteral">&quot;Propagation<sp/>Segment:<sp/>&quot;</highlight><highlight class="normal">)<sp/>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>Serial.println<sp/>(settings.mPropagationSegment)<sp/>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>Serial.print<sp/>(</highlight><highlight class="stringliteral">&quot;Phase<sp/>segment<sp/>1:<sp/>&quot;</highlight><highlight class="normal">)<sp/>;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>Serial.println<sp/>(settings.mPhaseSegment1)<sp/>;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>Serial.print<sp/>(</highlight><highlight class="stringliteral">&quot;Phase<sp/>segment<sp/>2:<sp/>&quot;</highlight><highlight class="normal">)<sp/>;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>Serial.println<sp/>(settings.mPhaseSegment2)<sp/>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>Serial.print<sp/>(</highlight><highlight class="stringliteral">&quot;RJW:<sp/>&quot;</highlight><highlight class="normal">)<sp/>;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>Serial.println<sp/>(settings.mRJW)<sp/>;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>Serial.print<sp/>(</highlight><highlight class="stringliteral">&quot;Triple<sp/>Sampling:<sp/>&quot;</highlight><highlight class="normal">)<sp/>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>Serial.println<sp/>(settings.mTripleSampling<sp/>?<sp/></highlight><highlight class="stringliteral">&quot;yes&quot;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&quot;no&quot;</highlight><highlight class="normal">)<sp/>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>Serial.print<sp/>(</highlight><highlight class="stringliteral">&quot;Actual<sp/>bitrate:<sp/>&quot;</highlight><highlight class="normal">)<sp/>;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>Serial.print<sp/>(settings.actualBitRate<sp/>())<sp/>;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>Serial.println<sp/>(</highlight><highlight class="stringliteral">&quot;<sp/>bit/s&quot;</highlight><highlight class="normal">)<sp/>;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>Serial.print<sp/>(</highlight><highlight class="stringliteral">&quot;Exact<sp/>bitrate<sp/>?<sp/>&quot;</highlight><highlight class="normal">)<sp/>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>Serial.println<sp/>(settings.exactBitRate<sp/>()<sp/>?<sp/></highlight><highlight class="stringliteral">&quot;yes&quot;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&quot;no&quot;</highlight><highlight class="normal">)<sp/>;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>Serial.print<sp/>(</highlight><highlight class="stringliteral">&quot;Distance<sp/>from<sp/>wished<sp/>bitrate:<sp/>&quot;</highlight><highlight class="normal">)<sp/>;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>Serial.print<sp/>(settings.ppmFromWishedBitRate<sp/>())<sp/>;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>Serial.println<sp/>(</highlight><highlight class="stringliteral">&quot;<sp/>ppm&quot;</highlight><highlight class="normal">)<sp/>;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>Serial.print<sp/>(</highlight><highlight class="stringliteral">&quot;Sample<sp/>point:<sp/>&quot;</highlight><highlight class="normal">)<sp/>;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>Serial.print<sp/>(settings.samplePointFromBitStart<sp/>())<sp/>;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/>Serial.println<sp/>(</highlight><highlight class="stringliteral">&quot;%&quot;</highlight><highlight class="normal">)<sp/>;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/>uint32_t<sp/>errorCode<sp/>=<sp/>ACAN_T4::can3.begin<sp/>(settings)<sp/>;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(0<sp/>==<sp/>errorCode)<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.println<sp/>(</highlight><highlight class="stringliteral">&quot;can3<sp/>ok&quot;</highlight><highlight class="normal">)<sp/>;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print<sp/>(</highlight><highlight class="stringliteral">&quot;Error<sp/>can3:<sp/>0x&quot;</highlight><highlight class="normal">)<sp/>;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.println<sp/>(errorCode,<sp/>HEX)<sp/>;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>delay<sp/>(20)<sp/>;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/main.cpp"/>
+  </compounddef>
+</doxygen>

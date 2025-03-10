@@ -1,0 +1,3 @@
+This whole project was to try to implement an anticogging feature to a brushless motor, to be used in robotic actuation with low gear reduction ratio.
+It's still a bit messy as the data needs by hand post-processing, but the idea is to collect datas on currents used by the motor at every angle, use these datas to generate a lookup table of the compensation needed for cogging, and then use this lookup table of course.
+I tried two current sensing methods, one measuring the direct DC current into the system at every angle, and another using the "virtual" Qcurrent from Field-Oriented Control processing.

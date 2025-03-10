@@ -1,0 +1,96 @@
+#include <Arduino.h>
+#include <board_vesc_6.h>
+#include <SimpleFOC.h>
+
+
+// MagneticSensorI2C(uint8_t _chip_address, float _cpr, uint8_t _angle_register_msb)
+//  chip_address  I2C chip address
+//  bit_resolution  resolution of the sensor
+//  angle_register_msb  angle read register msb
+//  bits_used_msb  number of used bits in msb register
+// 
+// make sure to read the chip address and the chip angle register msb value from the datasheet
+// also in most cases you will need external pull-ups on SDA and SCL lines!!!!!
+//
+// For AS5058B
+// MagneticSensorI2C sensor = MagneticSensorI2C(0x40, 14, 0xFE, 8);
+
+// Example of AS5600 configuration 
+
+HardwareSerial Serial6(USART6);
+??TwoWire wire2(I2C2_SDA, I2C2_SCL);
+//TwoWire wire2(I2C2_SDA, I2C2_SCL);
+MagneticSensorSPI sensor = MagneticSensorSPI(AS5048_I2C);
+ 
+void setup() {
+
+  // monitoring port
+  Serial6.begin(115200);
+
+  // configure i2C
+  // initialise magnetic sensor hardware
+  //sensor.init(&wire2);
+  wire2.setClock(10000);
+  wire2.begin();
+
+
+  Serial6.println("Sensor ready");
+  delay(1000);
+}
+
+
+void loop() {
+
+  // write on wire2,
+  delay(100);
+
+
+  // iterative function updating the sensor internal variables
+  // it is usually called in motor.loopFOC()
+  // this function reads the sensor hardware and 
+  // has to be called before getAngle nad getVelocity
+  //sensor.update();
+  
+  // display the angle and the angular velocity to the terminal
+  //Serial6.print(sensor.getAngle());
+  //Serial6.print("\t");
+  //Serial6.println(sensor.getVelocity());
+
+
+    int nDevices = 0;
+  for(int address = 1; address < 127; address++ )
+  {
+    // The i2c_scanner uses the return value of
+    // the Write.endTransmisstion to see if
+    // a device did acknowledge to the address.
+    wire2.beginTransmission(address);
+    int error = wire2.endTransmission();
+
+    if (error == 0)
+    {
+      Serial6.print("I2C device found at address 0x");
+      if (address<16)
+      Serial6.print("0");
+      Serial6.print(address,HEX);
+      Serial6.println("  !");
+
+      nDevices++;
+    }
+    else if (error==4)
+    {
+      Serial6.print("Unknown error at address 0x");
+      if (address<16)
+        Serial.print("0");
+      Serial6.println(address,HEX);
+    }
+  }
+  if (nDevices == 0)
+    Serial6.println("No I2C devices found\n");
+  else
+    Serial6.println("done\n");
+
+  delay(5000);           // wait 5 seconds for next scan
+
+
+}
+ 

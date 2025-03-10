@@ -1,0 +1,47 @@
+\doxysection{src/main.cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+{\ttfamily \#include $<$ACAN\+\_\+\+T4.\+h$>$}\newline
+{\ttfamily \#include "{}FOCDriver.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{main_8cpp_ace64893cc25018d118abec238729ff05}{init\+\_\+\+CAN}} (int baudrate=1000 \texorpdfstring{$\ast$}{*}1000, bool print\+\_\+params=true)
+\item 
+void \mbox{\hyperlink{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}{setup}} ()
+\item 
+void \mbox{\hyperlink{main_8cpp_afe461d27b9c48d5921c00d521181f12f}{loop}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_ace64893cc25018d118abec238729ff05}\index{main.cpp@{main.cpp}!init\_CAN@{init\_CAN}}
+\index{init\_CAN@{init\_CAN}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{init\_CAN()}{init\_CAN()}}
+{\footnotesize\ttfamily \label{main_8cpp_ace64893cc25018d118abec238729ff05} 
+bool init\+\_\+\+CAN (\begin{DoxyParamCaption}\item[{int}]{baudrate}{ = {\ttfamily 1000\texorpdfstring{$\ast$}{*}1000}, }\item[{bool}]{print\+\_\+params}{ = {\ttfamily true}}\end{DoxyParamCaption})}
+
+initialise the can 3 bus, checks for erros and prints the settings
+
+
+\begin{DoxyParams}{Parameters}
+{\em baudrate} & the baudrate of the can bus, default is 1Mbit/s \\
+\hline
+{\em print\+\_\+params} & if true, prints the settings of the can bus, default is true \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the can bus was initialised successfully
+\end{DoxyReturn}
+\Hypertarget{main_8cpp_afe461d27b9c48d5921c00d521181f12f}\index{main.cpp@{main.cpp}!loop@{loop}}
+\index{loop@{loop}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily \label{main_8cpp_afe461d27b9c48d5921c00d521181f12f} 
+void loop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}\index{main.cpp@{main.cpp}!setup@{setup}}
+\index{setup@{setup}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily \label{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d} 
+void setup (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+

@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.11.0" xml:lang="en-US">
+  <compound refid="class_f_o_c_driver" kind="class"><name>FOCDriver</name>
+    <member refid="class_f_o_c_driver_1ab1b826fc0431334d2ae56a52b8b2d2ea" kind="variable"><name>CAN</name></member>
+    <member refid="class_f_o_c_driver_1aafee5c00cea897463c73d72d8788d210" kind="variable"><name>ID</name></member>
+    <member refid="class_f_o_c_driver_1a855457bb773f45e73016ba5b7b70a9f6" kind="variable"><name>maxTemp</name></member>
+    <member refid="class_f_o_c_driver_1acbeabccaf24756a3edeec3e2f6431fe3" kind="variable"><name>maxCurrent</name></member>
+    <member refid="class_f_o_c_driver_1af9fb840cdf26e0ae3fc51538a7f0ad00" kind="variable"><name>polePairs</name></member>
+    <member refid="class_f_o_c_driver_1a4b5e2c94a690ec28e43b1b4afb9a856d" kind="variable"><name>resistance</name></member>
+    <member refid="class_f_o_c_driver_1ab9a9ecc86fdb3da7394e5d3f14b52206" kind="variable"><name>TorqueConstant</name></member>
+    <member refid="class_f_o_c_driver_1a1111d23924e5a536fb75b815d57b96d9" kind="variable"><name>alpha</name></member>
+    <member refid="class_f_o_c_driver_1a40473ba03358c64491f0084ec9e52886" kind="variable"><name>beta</name></member>
+    <member refid="class_f_o_c_driver_1a537c8d7e538f0c44d5f5fe85f4099185" kind="variable"><name>alphaVelocity</name></member>
+    <member refid="class_f_o_c_driver_1abe48cb011ca7bfd8bbf6af5bcbbfd283" kind="variable"><name>betaVelocity</name></member>
+    <member refid="class_f_o_c_driver_1a5fbd17e908f480490bea7f189df92ee3" kind="variable"><name>temp</name></member>
+    <member refid="class_f_o_c_driver_1adc90f3e0515bb5d2e9cc1742eab2656e" kind="variable"><name>targetForce</name></member>
+    <member refid="class_f_o_c_driver_1a3037a5515ba8f7c70af9899fdbf9a1bb" kind="function"><name>sendMessage</name></member>
+    <member refid="class_f_o_c_driver_1a9f81cf0e55e40efec0e388a1260f46ab" kind="function"><name>sendMessage</name></member>
+    <member refid="class_f_o_c_driver_1a391ad9eb21af9bfeca0c62404050366b" kind="function"><name>sendMessage</name></member>
+    <member refid="class_f_o_c_driver_1a58ee55ef00db62cc4918a5de6f72fdba" kind="function"><name>FOCDriver</name></member>
+    <member refid="class_f_o_c_driver_1a9dc0ba44bad942e2222fda4c05e99a60" kind="function"><name>FOCDriver</name></member>
+    <member refid="class_f_o_c_driver_1a4db49a5d5f4db50229d42f0ff91f633a" kind="function"><name>init</name></member>
+    <member refid="class_f_o_c_driver_1a01fbf2f5d270b96fc3fe131838bc4837" kind="function"><name>run</name></member>
+    <member refid="class_f_o_c_driver_1ab3aa9617cfa31896d90bfe76887c0e6f" kind="function"><name>setAlpha</name></member>
+    <member refid="class_f_o_c_driver_1ad18066d1a1d2e7e514a0f4ff97e67b4d" kind="function"><name>setTargetForce</name></member>
+    <member refid="class_f_o_c_driver_1a60a4b4cf21dc117a981268ce7e1fad65" kind="function"><name>setMaxTemp</name></member>
+    <member refid="class_f_o_c_driver_1a0a28c59208c3ac68bf93bc9a6c72cb5e" kind="function"><name>setMaxCurrent</name></member>
+    <member refid="class_f_o_c_driver_1a7b4785d15a3f72e824b1ee9f67bc4baf" kind="function"><name>setMotorParams</name></member>
+    <member refid="class_f_o_c_driver_1acfc1cdf72d4797ccee6e06d9c3275955" kind="function"><name>getAlpha</name></member>
+    <member refid="class_f_o_c_driver_1a21f0cccda9de64867a2406be9118609f" kind="function"><name>getBeta</name></member>
+    <member refid="class_f_o_c_driver_1a513c44a5e190f833b0d87e55fbd129ec" kind="function"><name>getAlphaVelocity</name></member>
+    <member refid="class_f_o_c_driver_1aa7ca59c78c21fbf4f852b3bb700bb82c" kind="function"><name>getBetaVelocity</name></member>
+    <member refid="class_f_o_c_driver_1a01e4c37945f0cd0b95a8cceea9ea5c1e" kind="function"><name>getTargetForce</name></member>
+    <member refid="class_f_o_c_driver_1ada27a8bb717c2010d22c06877f240688" kind="function"><name>getMaxTemp</name></member>
+    <member refid="class_f_o_c_driver_1aedd914e33e1a5a60281ba8af6dfafa2d" kind="function"><name>getMaxCurrent</name></member>
+    <member refid="class_f_o_c_driver_1a45948110b2ad223aa20a1c05ba36bd23" kind="function"><name>getPolePairs</name></member>
+    <member refid="class_f_o_c_driver_1ac0e0183bf65c6d87557a5069a47e50bf" kind="function"><name>getResistance</name></member>
+    <member refid="class_f_o_c_driver_1a9993ed73aab32e075815a338ec03e361" kind="function"><name>getTorqueConstant</name></member>
+    <member refid="class_f_o_c_driver_1af491dbbbaa68da53da813c03a9f3425d" kind="function"><name>updateAlpha</name></member>
+    <member refid="class_f_o_c_driver_1aafabae9c6391883fcc2cec90630edc7b" kind="function"><name>updateBeta</name></member>
+    <member refid="class_f_o_c_driver_1a8d0e3027ef04ecb52f148dee5dd947d4" kind="function"><name>updateTemp</name></member>
+    <member refid="class_f_o_c_driver_1abc0ed6d07f1a69ec1779bf773911bbaf" kind="function"><name>updateAlphaVelocity</name></member>
+    <member refid="class_f_o_c_driver_1a44e69da278198f0f525e184ef19d3838" kind="function"><name>updateBetaVelocity</name></member>
+  </compound>
+  <compound refid="structvariable" kind="struct"><name>variable</name>
+    <member refid="structvariable_1a1cc00167b79441eb496fba24038d850c" kind="variable"><name>value</name></member>
+    <member refid="structvariable_1a7f923c464ea523a389870a73bf89af24" kind="variable"><name>lastUpdate</name></member>
+  </compound>
+  <compound refid="_f_o_c_driver_8cpp" kind="file"><name>FOCDriver.cpp</name>
+  </compound>
+  <compound refid="_f_o_c_driver_8h" kind="file"><name>FOCDriver.h</name>
+  </compound>
+  <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="main_8cpp_1aeeb86238c49ed5c1d37773005d52b5c9" kind="variable"><name>gBlinkDate</name></member>
+    <member refid="main_8cpp_1a51fa040131b5a58cf457a7d508c4033d" kind="variable"><name>SEND_COUNT</name></member>
+    <member refid="main_8cpp_1a28d603fc7c9857d891b759e57280ddce" kind="function"><name>init_CAN</name></member>
+    <member refid="main_8cpp_1a4fc01d736fe50cf5b977f755b675f11d" kind="function"><name>setup</name></member>
+    <member refid="main_8cpp_1afe461d27b9c48d5921c00d521181f12f" kind="function"><name>loop</name></member>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+</doxygenindex>
