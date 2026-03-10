@@ -3,7 +3,7 @@
 ![Testbed Overview](./Latex%20report/testbed2_1.jpg)
 
 ## 🌟 Overview
-This repository documents the development, construction, and testing of **Testbed 2**, a variable mechanical stiffness robotic arm. Built by **Matthieu Prigent**, this prototype serves as a learning platform for the development of tendon-driven actuation and variable impedance control.
+This repository documents the development, construction, and testing of **Testbed 2**, a variable mechanical stiffness robotic arm. Built by **Matthieu Prigent** during it's internship in Salisbury Robotic Lab at Stanford, this prototype serves as a learning platform for the development of tendon-driven actuation and variable impedance control.
 
 > [!NOTE]
 > For a comprehensive technical analysis, please refer to the [Testbed 2 report.pdf](./Testbed%202%20report.pdf) located in the project root.
