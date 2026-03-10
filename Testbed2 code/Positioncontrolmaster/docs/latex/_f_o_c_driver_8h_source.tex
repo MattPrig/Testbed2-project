@@ -1,0 +1,64 @@
+\doxysection{FOCDriver.\+h}
+\hypertarget{_f_o_c_driver_8h_source}{}\label{_f_o_c_driver_8h_source}\index{src/FOCDriver.h@{src/FOCDriver.h}}
+\mbox{\hyperlink{_f_o_c_driver_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <ACAN\_T4.h>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <Arduino.h>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvariable}{variable}}\ \{}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structvariable_a1cc00167b79441eb496fba24038d850c}{value}}\ =\ 0;}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{structvariable_a7f923c464ea523a389870a73bf89af24}{lastUpdate}}\ =\ 0;}
+\DoxyCodeLine{00007\ \};}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_f_o_c_driver}{FOCDriver}}\ \{}
+\DoxyCodeLine{00019\ private\ :\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{comment}{//\ CAN}}
+\DoxyCodeLine{00021\ \ \ \ \ ACAN\_T4*\ CAN;\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//\ parameters}}
+\DoxyCodeLine{00024\ \ \ \ \ uint8\_t\ ID\ ;\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{float}\ maxTemp\ =\ 0;\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{float}\ maxCurrent\ =\ 0;\ }
+\DoxyCodeLine{00027\ \ \ \ \ uint8\_t\ polePairs\ =\ 0;\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{float}\ resistance\ =\ 0;\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{float}\ TorqueConstant\ =\ 0;\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{//\ motor\ state}}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{structvariable}{variable}}\ alpha;\ }
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{structvariable}{variable}}\ beta;\ }
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{structvariable}{variable}}\ alphaVelocity;\ }
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{structvariable}{variable}}\ betaVelocity;\ }
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{structvariable}{variable}}\ temp;\ }
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{structvariable}{variable}}\ targetForce;\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{comment}{//\ methods}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{bool}\ sendMessage(uint8\_t\ service\_id,\ uint8\_t\ sub\_service\_id,\ \textcolor{keywordtype}{float}\ data);\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{bool}\ sendMessage(uint8\_t\ service\_id,\ uint8\_t\ sub\_service\_id,\ uint8\_t\ data);\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{bool}\ sendMessage(uint8\_t\ service\_id,\ uint8\_t\ sub\_service\_id);\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//\ constructor}}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{class_f_o_c_driver_a58ee55ef00db62cc4918a5de6f72fdba}{FOCDriver}}();\ }
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{class_f_o_c_driver_a58ee55ef00db62cc4918a5de6f72fdba}{FOCDriver}}(ACAN\_T4*\ \_CAN,\ uint8\_t\ \_ID);\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//\ methods}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_f_o_c_driver_a4db49a5d5f4db50229d42f0ff91f633a}{init}}(\textcolor{keywordtype}{float}\ resistance,\ \textcolor{keywordtype}{int}\ polePairs,\ \textcolor{keywordtype}{float}\ TorqueConstant);\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_f_o_c_driver_a01fbf2f5d270b96fc3fe131838bc4837}{run}}();\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_f_o_c_driver_ab3aa9617cfa31896d90bfe76887c0e6f}{setAlpha}}(\textcolor{keywordtype}{float}\ alpha);\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_f_o_c_driver_ad18066d1a1d2e7e514a0f4ff97e67b4d}{setTargetForce}}(\textcolor{keywordtype}{float}\ targetForce);\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_f_o_c_driver_a60a4b4cf21dc117a981268ce7e1fad65}{setMaxTemp}}(\textcolor{keywordtype}{float}\ maxTemp);\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_f_o_c_driver_a0a28c59208c3ac68bf93bc9a6c72cb5e}{setMaxCurrent}}(\textcolor{keywordtype}{float}\ maxCurrent);\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_f_o_c_driver_a7b4785d15a3f72e824b1ee9f67bc4baf}{setMotorParams}}(\textcolor{keywordtype}{int}\ polePairs,\ \textcolor{keywordtype}{float}\ resistance,\ \textcolor{keywordtype}{float}\ TorqueConstant);\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_f_o_c_driver_acfc1cdf72d4797ccee6e06d9c3275955}{getAlpha}}();\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_f_o_c_driver_a21f0cccda9de64867a2406be9118609f}{getBeta}}();\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_f_o_c_driver_a513c44a5e190f833b0d87e55fbd129ec}{getAlphaVelocity}}();\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_f_o_c_driver_aa7ca59c78c21fbf4f852b3bb700bb82c}{getBetaVelocity}}();\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_f_o_c_driver_a01e4c37945f0cd0b95a8cceea9ea5c1e}{getTargetForce}}();\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_f_o_c_driver_ada27a8bb717c2010d22c06877f240688}{getMaxTemp}}();\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_f_o_c_driver_aedd914e33e1a5a60281ba8af6dfafa2d}{getMaxCurrent}}();\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_f_o_c_driver_a45948110b2ad223aa20a1c05ba36bd23}{getPolePairs}}();\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_f_o_c_driver_ac0e0183bf65c6d87557a5069a47e50bf}{getResistance}}();\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_f_o_c_driver_a9993ed73aab32e075815a338ec03e361}{getTorqueConstant}}();\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_f_o_c_driver_af491dbbbaa68da53da813c03a9f3425d}{updateAlpha}}();\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_f_o_c_driver_aafabae9c6391883fcc2cec90630edc7b}{updateBeta}}();\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_f_o_c_driver_a8d0e3027ef04ecb52f148dee5dd947d4}{updateTemp}}();\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_f_o_c_driver_abc0ed6d07f1a69ec1779bf773911bbaf}{updateAlphaVelocity}}();\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_f_o_c_driver_a44e69da278198f0f525e184ef19d3838}{updateBetaVelocity}}();\ }
+\DoxyCodeLine{00078\ \};}
+
+\end{DoxyCode}

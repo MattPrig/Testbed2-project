@@ -1,0 +1,416 @@
+\doxysection{FOCDriver Class Reference}
+\hypertarget{class_f_o_c_driver}{}\label{class_f_o_c_driver}\index{FOCDriver@{FOCDriver}}
+
+
+The \doxylink{class_f_o_c_driver}{FOCDriver} class allows control of an FOC driver through a CAN bus.  
+
+
+
+
+{\ttfamily \#include $<$FOCDriver.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_f_o_c_driver_a58ee55ef00db62cc4918a5de6f72fdba}{FOCDriver}} ()
+\item 
+\mbox{\hyperlink{class_f_o_c_driver_a2ea9161570f6719b016fc8e395a45ed5}{FOCDriver}} (ACAN\+\_\+\+T4 \texorpdfstring{$\ast$}{*}\+\_\+\+CAN, uint8\+\_\+t \+\_\+\+ID)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{class_f_o_c_driver}{FOCDriver} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_f_o_c_driver_a4db49a5d5f4db50229d42f0ff91f633a}{init}} (float resistance, int pole\+Pairs, float Torque\+Constant)
+\begin{DoxyCompactList}\small\item\em Initializes the \doxylink{class_f_o_c_driver}{FOCDriver} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_f_o_c_driver_a01fbf2f5d270b96fc3fe131838bc4837}{run}} ()
+\begin{DoxyCompactList}\small\item\em Function to call regularly in the loop to receive the messages that have been received and handle them. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_f_o_c_driver_ab3aa9617cfa31896d90bfe76887c0e6f}{set\+Alpha}} (float alpha)
+\begin{DoxyCompactList}\small\item\em Set the alpha value of the motor, changes the offset of the sensor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_f_o_c_driver_ad18066d1a1d2e7e514a0f4ff97e67b4d}{set\+Target\+Force}} (float target\+Force)
+\begin{DoxyCompactList}\small\item\em Set the target force of the motor, the driver will send beta as a reply. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_f_o_c_driver_a60a4b4cf21dc117a981268ce7e1fad65}{set\+Max\+Temp}} (float max\+Temp)
+\begin{DoxyCompactList}\small\item\em Set the maximum temperature of the motor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_f_o_c_driver_a0a28c59208c3ac68bf93bc9a6c72cb5e}{set\+Max\+Current}} (float max\+Current)
+\begin{DoxyCompactList}\small\item\em Set the maximum current of the motor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_f_o_c_driver_a7b4785d15a3f72e824b1ee9f67bc4baf}{set\+Motor\+Params}} (int pole\+Pairs, float resistance, float Torque\+Constant)
+\begin{DoxyCompactList}\small\item\em Set the parameters of the motor. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_f_o_c_driver_acfc1cdf72d4797ccee6e06d9c3275955}{get\+Alpha}} ()
+\begin{DoxyCompactList}\small\item\em Get the alpha value of the motor. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_f_o_c_driver_a21f0cccda9de64867a2406be9118609f}{get\+Beta}} ()
+\begin{DoxyCompactList}\small\item\em Get the beta value of the motor. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_f_o_c_driver_a513c44a5e190f833b0d87e55fbd129ec}{get\+Alpha\+Velocity}} ()
+\begin{DoxyCompactList}\small\item\em Get the alpha velocity value of the motor. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_f_o_c_driver_aa7ca59c78c21fbf4f852b3bb700bb82c}{get\+Beta\+Velocity}} ()
+\begin{DoxyCompactList}\small\item\em Get the beta velocity value of the motor. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_f_o_c_driver_a01e4c37945f0cd0b95a8cceea9ea5c1e}{get\+Target\+Force}} ()
+\begin{DoxyCompactList}\small\item\em Get the target force value of the motor. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_f_o_c_driver_ada27a8bb717c2010d22c06877f240688}{get\+Max\+Temp}} ()
+\begin{DoxyCompactList}\small\item\em Get the maximum temperature of the motor. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_f_o_c_driver_aedd914e33e1a5a60281ba8af6dfafa2d}{get\+Max\+Current}} ()
+\begin{DoxyCompactList}\small\item\em Get the maximum current of the motor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_f_o_c_driver_a45948110b2ad223aa20a1c05ba36bd23}{get\+Pole\+Pairs}} ()
+\begin{DoxyCompactList}\small\item\em Get the number of pole pairs of the motor. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_f_o_c_driver_ac0e0183bf65c6d87557a5069a47e50bf}{get\+Resistance}} ()
+\item 
+float \mbox{\hyperlink{class_f_o_c_driver_a9993ed73aab32e075815a338ec03e361}{get\+Torque\+Constant}} ()
+\item 
+void \mbox{\hyperlink{class_f_o_c_driver_af491dbbbaa68da53da813c03a9f3425d}{update\+Alpha}} ()
+\begin{DoxyCompactList}\small\item\em Update the alpha value of the motor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_f_o_c_driver_aafabae9c6391883fcc2cec90630edc7b}{update\+Beta}} ()
+\begin{DoxyCompactList}\small\item\em Update the beta value of the motor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_f_o_c_driver_a8d0e3027ef04ecb52f148dee5dd947d4}{update\+Temp}} ()
+\begin{DoxyCompactList}\small\item\em Update the temperature value of the motor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_f_o_c_driver_abc0ed6d07f1a69ec1779bf773911bbaf}{update\+Alpha\+Velocity}} ()
+\begin{DoxyCompactList}\small\item\em Update the alpha velocity value of the motor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_f_o_c_driver_a44e69da278198f0f525e184ef19d3838}{update\+Beta\+Velocity}} ()
+\begin{DoxyCompactList}\small\item\em Update the beta velocity value of the motor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_f_o_c_driver}{FOCDriver} class allows control of an FOC driver through a CAN bus. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_f_o_c_driver_a58ee55ef00db62cc4918a5de6f72fdba}\index{FOCDriver@{FOCDriver}!FOCDriver@{FOCDriver}}
+\index{FOCDriver@{FOCDriver}!FOCDriver@{FOCDriver}}
+\doxysubsubsection{\texorpdfstring{FOCDriver()}{FOCDriver()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_f_o_c_driver_a58ee55ef00db62cc4918a5de6f72fdba} 
+FOCDriver\+::\+FOCDriver (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Default constructor. \Hypertarget{class_f_o_c_driver_a2ea9161570f6719b016fc8e395a45ed5}\index{FOCDriver@{FOCDriver}!FOCDriver@{FOCDriver}}
+\index{FOCDriver@{FOCDriver}!FOCDriver@{FOCDriver}}
+\doxysubsubsection{\texorpdfstring{FOCDriver()}{FOCDriver()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_f_o_c_driver_a2ea9161570f6719b016fc8e395a45ed5} 
+FOCDriver\+::\+FOCDriver (\begin{DoxyParamCaption}\item[{ACAN\+\_\+\+T4 \texorpdfstring{$\ast$}{*}}]{\+\_\+\+CAN}{, }\item[{uint8\+\_\+t}]{\+\_\+\+ID}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a new \doxylink{class_f_o_c_driver}{FOCDriver} object. 
+
+Constructor that initializes the \doxylink{class_f_o_c_driver}{FOCDriver} object with the given CAN object and ID.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+CAN} & The CAN bus to use. \\
+\hline
+{\em \+\_\+\+ID} & The ID of the driver. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_f_o_c_driver_acfc1cdf72d4797ccee6e06d9c3275955}\index{FOCDriver@{FOCDriver}!getAlpha@{getAlpha}}
+\index{getAlpha@{getAlpha}!FOCDriver@{FOCDriver}}
+\doxysubsubsection{\texorpdfstring{getAlpha()}{getAlpha()}}
+{\footnotesize\ttfamily \label{class_f_o_c_driver_acfc1cdf72d4797ccee6e06d9c3275955} 
+float FOCDriver\+::get\+Alpha (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the alpha value of the motor. 
+
+Gets the alpha value of the motor.
+
+\begin{DoxyReturn}{Returns}
+The alpha value of the motor. 
+\end{DoxyReturn}
+\Hypertarget{class_f_o_c_driver_a513c44a5e190f833b0d87e55fbd129ec}\index{FOCDriver@{FOCDriver}!getAlphaVelocity@{getAlphaVelocity}}
+\index{getAlphaVelocity@{getAlphaVelocity}!FOCDriver@{FOCDriver}}
+\doxysubsubsection{\texorpdfstring{getAlphaVelocity()}{getAlphaVelocity()}}
+{\footnotesize\ttfamily \label{class_f_o_c_driver_a513c44a5e190f833b0d87e55fbd129ec} 
+float FOCDriver\+::get\+Alpha\+Velocity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the alpha velocity value of the motor. 
+
+Gets the velocity of the alpha value.
+
+\begin{DoxyReturn}{Returns}
+The alpha velocity value of the motor. 
+\end{DoxyReturn}
+\Hypertarget{class_f_o_c_driver_a21f0cccda9de64867a2406be9118609f}\index{FOCDriver@{FOCDriver}!getBeta@{getBeta}}
+\index{getBeta@{getBeta}!FOCDriver@{FOCDriver}}
+\doxysubsubsection{\texorpdfstring{getBeta()}{getBeta()}}
+{\footnotesize\ttfamily \label{class_f_o_c_driver_a21f0cccda9de64867a2406be9118609f} 
+float FOCDriver\+::get\+Beta (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the beta value of the motor. 
+
+Gets the beta value of the motor.
+
+\begin{DoxyReturn}{Returns}
+The beta value of the motor. 
+\end{DoxyReturn}
+\Hypertarget{class_f_o_c_driver_aa7ca59c78c21fbf4f852b3bb700bb82c}\index{FOCDriver@{FOCDriver}!getBetaVelocity@{getBetaVelocity}}
+\index{getBetaVelocity@{getBetaVelocity}!FOCDriver@{FOCDriver}}
+\doxysubsubsection{\texorpdfstring{getBetaVelocity()}{getBetaVelocity()}}
+{\footnotesize\ttfamily \label{class_f_o_c_driver_aa7ca59c78c21fbf4f852b3bb700bb82c} 
+float FOCDriver\+::get\+Beta\+Velocity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the beta velocity value of the motor. 
+
+Gets the velocity of the beta value.
+
+\begin{DoxyReturn}{Returns}
+The beta velocity value of the motor. 
+\end{DoxyReturn}
+\Hypertarget{class_f_o_c_driver_aedd914e33e1a5a60281ba8af6dfafa2d}\index{FOCDriver@{FOCDriver}!getMaxCurrent@{getMaxCurrent}}
+\index{getMaxCurrent@{getMaxCurrent}!FOCDriver@{FOCDriver}}
+\doxysubsubsection{\texorpdfstring{getMaxCurrent()}{getMaxCurrent()}}
+{\footnotesize\ttfamily \label{class_f_o_c_driver_aedd914e33e1a5a60281ba8af6dfafa2d} 
+float FOCDriver\+::get\+Max\+Current (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the maximum current of the motor. 
+
+Gets the maximum current allowed for the FOC driver.
+
+\begin{DoxyReturn}{Returns}
+The maximum current of the motor. 
+\end{DoxyReturn}
+\Hypertarget{class_f_o_c_driver_ada27a8bb717c2010d22c06877f240688}\index{FOCDriver@{FOCDriver}!getMaxTemp@{getMaxTemp}}
+\index{getMaxTemp@{getMaxTemp}!FOCDriver@{FOCDriver}}
+\doxysubsubsection{\texorpdfstring{getMaxTemp()}{getMaxTemp()}}
+{\footnotesize\ttfamily \label{class_f_o_c_driver_ada27a8bb717c2010d22c06877f240688} 
+float FOCDriver\+::get\+Max\+Temp (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the maximum temperature of the motor. 
+
+Gets the maximum temperature allowed for the FOC driver.
+
+\begin{DoxyReturn}{Returns}
+The maximum temperature of the motor. 
+\end{DoxyReturn}
+\Hypertarget{class_f_o_c_driver_a45948110b2ad223aa20a1c05ba36bd23}\index{FOCDriver@{FOCDriver}!getPolePairs@{getPolePairs}}
+\index{getPolePairs@{getPolePairs}!FOCDriver@{FOCDriver}}
+\doxysubsubsection{\texorpdfstring{getPolePairs()}{getPolePairs()}}
+{\footnotesize\ttfamily \label{class_f_o_c_driver_a45948110b2ad223aa20a1c05ba36bd23} 
+int FOCDriver\+::get\+Pole\+Pairs (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the number of pole pairs of the motor. 
+
+Gets the number of pole pairs of the motor.
+
+\begin{DoxyReturn}{Returns}
+The number of pole pairs of the motor. 
+\end{DoxyReturn}
+\Hypertarget{class_f_o_c_driver_ac0e0183bf65c6d87557a5069a47e50bf}\index{FOCDriver@{FOCDriver}!getResistance@{getResistance}}
+\index{getResistance@{getResistance}!FOCDriver@{FOCDriver}}
+\doxysubsubsection{\texorpdfstring{getResistance()}{getResistance()}}
+{\footnotesize\ttfamily \label{class_f_o_c_driver_ac0e0183bf65c6d87557a5069a47e50bf} 
+float FOCDriver\+::get\+Resistance (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Gets the resistance of the motor. \Hypertarget{class_f_o_c_driver_a01e4c37945f0cd0b95a8cceea9ea5c1e}\index{FOCDriver@{FOCDriver}!getTargetForce@{getTargetForce}}
+\index{getTargetForce@{getTargetForce}!FOCDriver@{FOCDriver}}
+\doxysubsubsection{\texorpdfstring{getTargetForce()}{getTargetForce()}}
+{\footnotesize\ttfamily \label{class_f_o_c_driver_a01e4c37945f0cd0b95a8cceea9ea5c1e} 
+float FOCDriver\+::get\+Target\+Force (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the target force value of the motor. 
+
+Gets the target force for the motor.
+
+\begin{DoxyReturn}{Returns}
+The target force value of the motor. 
+\end{DoxyReturn}
+\Hypertarget{class_f_o_c_driver_a9993ed73aab32e075815a338ec03e361}\index{FOCDriver@{FOCDriver}!getTorqueConstant@{getTorqueConstant}}
+\index{getTorqueConstant@{getTorqueConstant}!FOCDriver@{FOCDriver}}
+\doxysubsubsection{\texorpdfstring{getTorqueConstant()}{getTorqueConstant()}}
+{\footnotesize\ttfamily \label{class_f_o_c_driver_a9993ed73aab32e075815a338ec03e361} 
+float FOCDriver\+::get\+Torque\+Constant (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Gets the torque constant of the motor. \Hypertarget{class_f_o_c_driver_a4db49a5d5f4db50229d42f0ff91f633a}\index{FOCDriver@{FOCDriver}!init@{init}}
+\index{init@{init}!FOCDriver@{FOCDriver}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \label{class_f_o_c_driver_a4db49a5d5f4db50229d42f0ff91f633a} 
+void FOCDriver\+::init (\begin{DoxyParamCaption}\item[{float}]{resistance}{, }\item[{int}]{pole\+Pairs}{, }\item[{float}]{Torque\+Constant}{}\end{DoxyParamCaption})}
+
+
+
+Initializes the \doxylink{class_f_o_c_driver}{FOCDriver} object. 
+
+Initializes the \doxylink{class_f_o_c_driver}{FOCDriver} object with the specified motor parameters.
+
+
+\begin{DoxyParams}{Parameters}
+{\em resistance} & The resistance of the winding of the motor. \\
+\hline
+{\em pole\+Pairs} & The number of pole pairs of the motor. \\
+\hline
+{\em Torque\+Constant} & The torque constant of the motor. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_f_o_c_driver_a01fbf2f5d270b96fc3fe131838bc4837}\index{FOCDriver@{FOCDriver}!run@{run}}
+\index{run@{run}!FOCDriver@{FOCDriver}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \label{class_f_o_c_driver_a01fbf2f5d270b96fc3fe131838bc4837} 
+void FOCDriver\+::run (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Function to call regularly in the loop to receive the messages that have been received and handle them. 
+
+Runs the \doxylink{class_f_o_c_driver}{FOCDriver}. \Hypertarget{class_f_o_c_driver_ab3aa9617cfa31896d90bfe76887c0e6f}\index{FOCDriver@{FOCDriver}!setAlpha@{setAlpha}}
+\index{setAlpha@{setAlpha}!FOCDriver@{FOCDriver}}
+\doxysubsubsection{\texorpdfstring{setAlpha()}{setAlpha()}}
+{\footnotesize\ttfamily \label{class_f_o_c_driver_ab3aa9617cfa31896d90bfe76887c0e6f} 
+void FOCDriver\+::set\+Alpha (\begin{DoxyParamCaption}\item[{float}]{\+\_\+alpha}{}\end{DoxyParamCaption})}
+
+
+
+Set the alpha value of the motor, changes the offset of the sensor. 
+
+Sets the alpha value of the motor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+alpha} & The alpha value to set. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_f_o_c_driver_a0a28c59208c3ac68bf93bc9a6c72cb5e}\index{FOCDriver@{FOCDriver}!setMaxCurrent@{setMaxCurrent}}
+\index{setMaxCurrent@{setMaxCurrent}!FOCDriver@{FOCDriver}}
+\doxysubsubsection{\texorpdfstring{setMaxCurrent()}{setMaxCurrent()}}
+{\footnotesize\ttfamily \label{class_f_o_c_driver_a0a28c59208c3ac68bf93bc9a6c72cb5e} 
+bool FOCDriver\+::set\+Max\+Current (\begin{DoxyParamCaption}\item[{float}]{\+\_\+max\+Current}{}\end{DoxyParamCaption})}
+
+
+
+Set the maximum current of the motor. 
+
+Sets the maximum current allowed for the FOC driver.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+max\+Current} & The maximum current to set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the message was sent successfully, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_f_o_c_driver_a60a4b4cf21dc117a981268ce7e1fad65}\index{FOCDriver@{FOCDriver}!setMaxTemp@{setMaxTemp}}
+\index{setMaxTemp@{setMaxTemp}!FOCDriver@{FOCDriver}}
+\doxysubsubsection{\texorpdfstring{setMaxTemp()}{setMaxTemp()}}
+{\footnotesize\ttfamily \label{class_f_o_c_driver_a60a4b4cf21dc117a981268ce7e1fad65} 
+bool FOCDriver\+::set\+Max\+Temp (\begin{DoxyParamCaption}\item[{float}]{\+\_\+max\+Temp}{}\end{DoxyParamCaption})}
+
+
+
+Set the maximum temperature of the motor. 
+
+Sets the maximum temperature allowed for the FOC driver.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+max\+Temp} & The maximum temperature to set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the message was sent successfully, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_f_o_c_driver_a7b4785d15a3f72e824b1ee9f67bc4baf}\index{FOCDriver@{FOCDriver}!setMotorParams@{setMotorParams}}
+\index{setMotorParams@{setMotorParams}!FOCDriver@{FOCDriver}}
+\doxysubsubsection{\texorpdfstring{setMotorParams()}{setMotorParams()}}
+{\footnotesize\ttfamily \label{class_f_o_c_driver_a7b4785d15a3f72e824b1ee9f67bc4baf} 
+bool FOCDriver\+::set\+Motor\+Params (\begin{DoxyParamCaption}\item[{int}]{\+\_\+pole\+Pairs}{, }\item[{float}]{\+\_\+resistance}{, }\item[{float}]{\+\_\+\+Torque\+Constant}{}\end{DoxyParamCaption})}
+
+
+
+Set the parameters of the motor. 
+
+Sets the motor parameters.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+pole\+Pairs} & The number of pole pairs of the motor. \\
+\hline
+{\em \+\_\+resistance} & The resistance of the winding of the motor. \\
+\hline
+{\em \+\_\+\+Torque\+Constant} & The torque constant of the motor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if all messages were sent successfully, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_f_o_c_driver_ad18066d1a1d2e7e514a0f4ff97e67b4d}\index{FOCDriver@{FOCDriver}!setTargetForce@{setTargetForce}}
+\index{setTargetForce@{setTargetForce}!FOCDriver@{FOCDriver}}
+\doxysubsubsection{\texorpdfstring{setTargetForce()}{setTargetForce()}}
+{\footnotesize\ttfamily \label{class_f_o_c_driver_ad18066d1a1d2e7e514a0f4ff97e67b4d} 
+bool FOCDriver\+::set\+Target\+Force (\begin{DoxyParamCaption}\item[{float}]{\+\_\+target\+Force}{}\end{DoxyParamCaption})}
+
+
+
+Set the target force of the motor, the driver will send beta as a reply. 
+
+Sets the target force for the motor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+target\+Force} & The target force to set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the message was sent successfully, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_f_o_c_driver_af491dbbbaa68da53da813c03a9f3425d}\index{FOCDriver@{FOCDriver}!updateAlpha@{updateAlpha}}
+\index{updateAlpha@{updateAlpha}!FOCDriver@{FOCDriver}}
+\doxysubsubsection{\texorpdfstring{updateAlpha()}{updateAlpha()}}
+{\footnotesize\ttfamily \label{class_f_o_c_driver_af491dbbbaa68da53da813c03a9f3425d} 
+void FOCDriver\+::update\+Alpha (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Update the alpha value of the motor. 
+
+Updates the alpha value of the motor. \Hypertarget{class_f_o_c_driver_abc0ed6d07f1a69ec1779bf773911bbaf}\index{FOCDriver@{FOCDriver}!updateAlphaVelocity@{updateAlphaVelocity}}
+\index{updateAlphaVelocity@{updateAlphaVelocity}!FOCDriver@{FOCDriver}}
+\doxysubsubsection{\texorpdfstring{updateAlphaVelocity()}{updateAlphaVelocity()}}
+{\footnotesize\ttfamily \label{class_f_o_c_driver_abc0ed6d07f1a69ec1779bf773911bbaf} 
+void FOCDriver\+::update\+Alpha\+Velocity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Update the alpha velocity value of the motor. 
+
+Updates the velocity of the alpha value. \Hypertarget{class_f_o_c_driver_aafabae9c6391883fcc2cec90630edc7b}\index{FOCDriver@{FOCDriver}!updateBeta@{updateBeta}}
+\index{updateBeta@{updateBeta}!FOCDriver@{FOCDriver}}
+\doxysubsubsection{\texorpdfstring{updateBeta()}{updateBeta()}}
+{\footnotesize\ttfamily \label{class_f_o_c_driver_aafabae9c6391883fcc2cec90630edc7b} 
+void FOCDriver\+::update\+Beta (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Update the beta value of the motor. 
+
+Updates the beta value of the motor. \Hypertarget{class_f_o_c_driver_a44e69da278198f0f525e184ef19d3838}\index{FOCDriver@{FOCDriver}!updateBetaVelocity@{updateBetaVelocity}}
+\index{updateBetaVelocity@{updateBetaVelocity}!FOCDriver@{FOCDriver}}
+\doxysubsubsection{\texorpdfstring{updateBetaVelocity()}{updateBetaVelocity()}}
+{\footnotesize\ttfamily \label{class_f_o_c_driver_a44e69da278198f0f525e184ef19d3838} 
+void FOCDriver\+::update\+Beta\+Velocity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Update the beta velocity value of the motor. 
+
+Updates the velocity of the beta value. \Hypertarget{class_f_o_c_driver_a8d0e3027ef04ecb52f148dee5dd947d4}\index{FOCDriver@{FOCDriver}!updateTemp@{updateTemp}}
+\index{updateTemp@{updateTemp}!FOCDriver@{FOCDriver}}
+\doxysubsubsection{\texorpdfstring{updateTemp()}{updateTemp()}}
+{\footnotesize\ttfamily \label{class_f_o_c_driver_a8d0e3027ef04ecb52f148dee5dd947d4} 
+void FOCDriver\+::update\+Temp (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Update the temperature value of the motor. 
+
+Updates the temperature of the FOC driver. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{_f_o_c_driver_8h}{FOCDriver.\+h}}\item 
+src/\mbox{\hyperlink{_f_o_c_driver_8cpp}{FOCDriver.\+cpp}}\end{DoxyCompactItemize}

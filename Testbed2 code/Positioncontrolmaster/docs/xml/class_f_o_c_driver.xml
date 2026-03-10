@@ -1,0 +1,705 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="class_f_o_c_driver" kind="class" language="C++" prot="public">
+    <compoundname>FOCDriver</compoundname>
+    <includes refid="_f_o_c_driver_8h" local="no">FOCDriver.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_f_o_c_driver_1ab1b826fc0431334d2ae56a52b8b2d2ea" prot="private" static="no" mutable="no">
+        <type>ACAN_T4 *</type>
+        <definition>ACAN_T4* FOCDriver::CAN</definition>
+        <argsstring></argsstring>
+        <name>CAN</name>
+        <qualifiedname>FOCDriver::CAN</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/FOCDriver.h" line="13" column="13" bodyfile="src/FOCDriver.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_f_o_c_driver_1aafee5c00cea897463c73d72d8788d210" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t FOCDriver::ID</definition>
+        <argsstring></argsstring>
+        <name>ID</name>
+        <qualifiedname>FOCDriver::ID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/FOCDriver.h" line="16" column="13" bodyfile="src/FOCDriver.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_f_o_c_driver_1a855457bb773f45e73016ba5b7b70a9f6" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FOCDriver::maxTemp</definition>
+        <argsstring></argsstring>
+        <name>maxTemp</name>
+        <qualifiedname>FOCDriver::maxTemp</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/FOCDriver.h" line="17" column="11" bodyfile="src/FOCDriver.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_f_o_c_driver_1acbeabccaf24756a3edeec3e2f6431fe3" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FOCDriver::maxCurrent</definition>
+        <argsstring></argsstring>
+        <name>maxCurrent</name>
+        <qualifiedname>FOCDriver::maxCurrent</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/FOCDriver.h" line="18" column="11" bodyfile="src/FOCDriver.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_f_o_c_driver_1af9fb840cdf26e0ae3fc51538a7f0ad00" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t FOCDriver::polePairs</definition>
+        <argsstring></argsstring>
+        <name>polePairs</name>
+        <qualifiedname>FOCDriver::polePairs</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/FOCDriver.h" line="19" column="13" bodyfile="src/FOCDriver.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_f_o_c_driver_1a4b5e2c94a690ec28e43b1b4afb9a856d" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FOCDriver::resistance</definition>
+        <argsstring></argsstring>
+        <name>resistance</name>
+        <qualifiedname>FOCDriver::resistance</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/FOCDriver.h" line="20" column="11" bodyfile="src/FOCDriver.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_f_o_c_driver_1ab9a9ecc86fdb3da7394e5d3f14b52206" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FOCDriver::TorqueConstant</definition>
+        <argsstring></argsstring>
+        <name>TorqueConstant</name>
+        <qualifiedname>FOCDriver::TorqueConstant</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/FOCDriver.h" line="21" column="11" bodyfile="src/FOCDriver.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_f_o_c_driver_1a1111d23924e5a536fb75b815d57b96d9" prot="private" static="no" mutable="no">
+        <type><ref refid="structvariable" kindref="compound">variable</ref></type>
+        <definition>variable FOCDriver::alpha</definition>
+        <argsstring></argsstring>
+        <name>alpha</name>
+        <qualifiedname>FOCDriver::alpha</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/FOCDriver.h" line="24" column="14" bodyfile="src/FOCDriver.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_f_o_c_driver_1a40473ba03358c64491f0084ec9e52886" prot="private" static="no" mutable="no">
+        <type><ref refid="structvariable" kindref="compound">variable</ref></type>
+        <definition>variable FOCDriver::beta</definition>
+        <argsstring></argsstring>
+        <name>beta</name>
+        <qualifiedname>FOCDriver::beta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/FOCDriver.h" line="25" column="14" bodyfile="src/FOCDriver.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_f_o_c_driver_1a537c8d7e538f0c44d5f5fe85f4099185" prot="private" static="no" mutable="no">
+        <type><ref refid="structvariable" kindref="compound">variable</ref></type>
+        <definition>variable FOCDriver::alphaVelocity</definition>
+        <argsstring></argsstring>
+        <name>alphaVelocity</name>
+        <qualifiedname>FOCDriver::alphaVelocity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/FOCDriver.h" line="26" column="14" bodyfile="src/FOCDriver.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_f_o_c_driver_1abe48cb011ca7bfd8bbf6af5bcbbfd283" prot="private" static="no" mutable="no">
+        <type><ref refid="structvariable" kindref="compound">variable</ref></type>
+        <definition>variable FOCDriver::betaVelocity</definition>
+        <argsstring></argsstring>
+        <name>betaVelocity</name>
+        <qualifiedname>FOCDriver::betaVelocity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/FOCDriver.h" line="27" column="14" bodyfile="src/FOCDriver.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_f_o_c_driver_1a5fbd17e908f480490bea7f189df92ee3" prot="private" static="no" mutable="no">
+        <type><ref refid="structvariable" kindref="compound">variable</ref></type>
+        <definition>variable FOCDriver::temp</definition>
+        <argsstring></argsstring>
+        <name>temp</name>
+        <qualifiedname>FOCDriver::temp</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/FOCDriver.h" line="28" column="14" bodyfile="src/FOCDriver.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_f_o_c_driver_1adc90f3e0515bb5d2e9cc1742eab2656e" prot="private" static="no" mutable="no">
+        <type><ref refid="structvariable" kindref="compound">variable</ref></type>
+        <definition>variable FOCDriver::targetForce</definition>
+        <argsstring></argsstring>
+        <name>targetForce</name>
+        <qualifiedname>FOCDriver::targetForce</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/FOCDriver.h" line="29" column="14" bodyfile="src/FOCDriver.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_f_o_c_driver_1a3037a5515ba8f7c70af9899fdbf9a1bb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FOCDriver::sendMessage</definition>
+        <argsstring>(uint8_t service_id, uint8_t sub_service_id, float data)</argsstring>
+        <name>sendMessage</name>
+        <qualifiedname>FOCDriver::sendMessage</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>service_id</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>sub_service_id</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/FOCDriver.h" line="32" column="10" bodyfile="src/FOCDriver.cpp" bodystart="169" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="class_f_o_c_driver_1a9f81cf0e55e40efec0e388a1260f46ab" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FOCDriver::sendMessage</definition>
+        <argsstring>(uint8_t service_id, uint8_t sub_service_id, uint8_t data)</argsstring>
+        <name>sendMessage</name>
+        <qualifiedname>FOCDriver::sendMessage</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>service_id</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>sub_service_id</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/FOCDriver.h" line="33" column="10" bodyfile="src/FOCDriver.cpp" bodystart="189" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="class_f_o_c_driver_1a391ad9eb21af9bfeca0c62404050366b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FOCDriver::sendMessage</definition>
+        <argsstring>(uint8_t service_id, uint8_t sub_service_id)</argsstring>
+        <name>sendMessage</name>
+        <qualifiedname>FOCDriver::sendMessage</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>service_id</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>sub_service_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/FOCDriver.h" line="34" column="10" bodyfile="src/FOCDriver.cpp" bodystart="200" bodyend="208"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_f_o_c_driver_1a58ee55ef00db62cc4918a5de6f72fdba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FOCDriver::FOCDriver</definition>
+        <argsstring>()</argsstring>
+        <name>FOCDriver</name>
+        <qualifiedname>FOCDriver::FOCDriver</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/FOCDriver.h" line="38" column="5" bodyfile="src/FOCDriver.cpp" bodystart="4" bodyend="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_f_o_c_driver_1a9dc0ba44bad942e2222fda4c05e99a60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FOCDriver::FOCDriver</definition>
+        <argsstring>(ACAN_T4 *_CAN, int _ID)</argsstring>
+        <name>FOCDriver</name>
+        <qualifiedname>FOCDriver::FOCDriver</qualifiedname>
+        <param>
+          <type>ACAN_T4 *</type>
+          <declname>_CAN</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_ID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/FOCDriver.h" line="39" column="5" bodyfile="src/FOCDriver.cpp" bodystart="7" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_f_o_c_driver_1a4db49a5d5f4db50229d42f0ff91f633a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FOCDriver::init</definition>
+        <argsstring>(float resistance, int polePairs, float TorqueConstant)</argsstring>
+        <name>init</name>
+        <qualifiedname>FOCDriver::init</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>resistance</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>polePairs</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>TorqueConstant</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/FOCDriver.h" line="42" column="10" bodyfile="src/FOCDriver.cpp" bodystart="12" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_f_o_c_driver_1a01fbf2f5d270b96fc3fe131838bc4837" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FOCDriver::run</definition>
+        <argsstring>()</argsstring>
+        <name>run</name>
+        <qualifiedname>FOCDriver::run</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/FOCDriver.h" line="43" column="10" bodyfile="src/FOCDriver.cpp" bodystart="18" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_f_o_c_driver_1ab3aa9617cfa31896d90bfe76887c0e6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FOCDriver::setAlpha</definition>
+        <argsstring>(float alpha)</argsstring>
+        <name>setAlpha</name>
+        <qualifiedname>FOCDriver::setAlpha</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>alpha</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/FOCDriver.h" line="45" column="10" bodyfile="src/FOCDriver.cpp" bodystart="75" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_f_o_c_driver_1ad18066d1a1d2e7e514a0f4ff97e67b4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FOCDriver::setTargetForce</definition>
+        <argsstring>(float targetForce)</argsstring>
+        <name>setTargetForce</name>
+        <qualifiedname>FOCDriver::setTargetForce</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>targetForce</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/FOCDriver.h" line="47" column="10" bodyfile="src/FOCDriver.cpp" bodystart="81" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_f_o_c_driver_1a60a4b4cf21dc117a981268ce7e1fad65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FOCDriver::setMaxTemp</definition>
+        <argsstring>(float maxTemp)</argsstring>
+        <name>setMaxTemp</name>
+        <qualifiedname>FOCDriver::setMaxTemp</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>maxTemp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/FOCDriver.h" line="48" column="10" bodyfile="src/FOCDriver.cpp" bodystart="87" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class_f_o_c_driver_1a0a28c59208c3ac68bf93bc9a6c72cb5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FOCDriver::setMaxCurrent</definition>
+        <argsstring>(float maxCurrent)</argsstring>
+        <name>setMaxCurrent</name>
+        <qualifiedname>FOCDriver::setMaxCurrent</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>maxCurrent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/FOCDriver.h" line="49" column="10" bodyfile="src/FOCDriver.cpp" bodystart="92" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="class_f_o_c_driver_1a7b4785d15a3f72e824b1ee9f67bc4baf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FOCDriver::setMotorParams</definition>
+        <argsstring>(int polePairs, float resistance, float TorqueConstant)</argsstring>
+        <name>setMotorParams</name>
+        <qualifiedname>FOCDriver::setMotorParams</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>polePairs</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>resistance</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>TorqueConstant</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/FOCDriver.h" line="50" column="10" bodyfile="src/FOCDriver.cpp" bodystart="98" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_f_o_c_driver_1acfc1cdf72d4797ccee6e06d9c3275955" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float FOCDriver::getAlpha</definition>
+        <argsstring>()</argsstring>
+        <name>getAlpha</name>
+        <qualifiedname>FOCDriver::getAlpha</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/FOCDriver.h" line="53" column="11" bodyfile="src/FOCDriver.cpp" bodystart="111" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="class_f_o_c_driver_1a21f0cccda9de64867a2406be9118609f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float FOCDriver::getBeta</definition>
+        <argsstring>()</argsstring>
+        <name>getBeta</name>
+        <qualifiedname>FOCDriver::getBeta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/FOCDriver.h" line="54" column="11" bodyfile="src/FOCDriver.cpp" bodystart="115" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="class_f_o_c_driver_1a513c44a5e190f833b0d87e55fbd129ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float FOCDriver::getAlphaVelocity</definition>
+        <argsstring>()</argsstring>
+        <name>getAlphaVelocity</name>
+        <qualifiedname>FOCDriver::getAlphaVelocity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/FOCDriver.h" line="55" column="11" bodyfile="src/FOCDriver.cpp" bodystart="119" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="class_f_o_c_driver_1aa7ca59c78c21fbf4f852b3bb700bb82c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float FOCDriver::getBetaVelocity</definition>
+        <argsstring>()</argsstring>
+        <name>getBetaVelocity</name>
+        <qualifiedname>FOCDriver::getBetaVelocity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/FOCDriver.h" line="56" column="11" bodyfile="src/FOCDriver.cpp" bodystart="123" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="class_f_o_c_driver_1a01e4c37945f0cd0b95a8cceea9ea5c1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float FOCDriver::getTargetForce</definition>
+        <argsstring>()</argsstring>
+        <name>getTargetForce</name>
+        <qualifiedname>FOCDriver::getTargetForce</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/FOCDriver.h" line="58" column="11" bodyfile="src/FOCDriver.cpp" bodystart="127" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="class_f_o_c_driver_1ada27a8bb717c2010d22c06877f240688" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float FOCDriver::getMaxTemp</definition>
+        <argsstring>()</argsstring>
+        <name>getMaxTemp</name>
+        <qualifiedname>FOCDriver::getMaxTemp</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/FOCDriver.h" line="59" column="11" bodyfile="src/FOCDriver.cpp" bodystart="131" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="class_f_o_c_driver_1aedd914e33e1a5a60281ba8af6dfafa2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float FOCDriver::getMaxCurrent</definition>
+        <argsstring>()</argsstring>
+        <name>getMaxCurrent</name>
+        <qualifiedname>FOCDriver::getMaxCurrent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/FOCDriver.h" line="60" column="11" bodyfile="src/FOCDriver.cpp" bodystart="135" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="class_f_o_c_driver_1a45948110b2ad223aa20a1c05ba36bd23" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FOCDriver::getPolePairs</definition>
+        <argsstring>()</argsstring>
+        <name>getPolePairs</name>
+        <qualifiedname>FOCDriver::getPolePairs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/FOCDriver.h" line="61" column="9" bodyfile="src/FOCDriver.cpp" bodystart="139" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="class_f_o_c_driver_1ac0e0183bf65c6d87557a5069a47e50bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float FOCDriver::getResistance</definition>
+        <argsstring>()</argsstring>
+        <name>getResistance</name>
+        <qualifiedname>FOCDriver::getResistance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/FOCDriver.h" line="62" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_f_o_c_driver_1a9993ed73aab32e075815a338ec03e361" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float FOCDriver::getTorqueConstant</definition>
+        <argsstring>()</argsstring>
+        <name>getTorqueConstant</name>
+        <qualifiedname>FOCDriver::getTorqueConstant</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/FOCDriver.h" line="63" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_f_o_c_driver_1af491dbbbaa68da53da813c03a9f3425d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FOCDriver::updateAlpha</definition>
+        <argsstring>()</argsstring>
+        <name>updateAlpha</name>
+        <qualifiedname>FOCDriver::updateAlpha</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/FOCDriver.h" line="65" column="10" bodyfile="src/FOCDriver.cpp" bodystart="145" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="class_f_o_c_driver_1aafabae9c6391883fcc2cec90630edc7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FOCDriver::updateBeta</definition>
+        <argsstring>()</argsstring>
+        <name>updateBeta</name>
+        <qualifiedname>FOCDriver::updateBeta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/FOCDriver.h" line="66" column="10" bodyfile="src/FOCDriver.cpp" bodystart="149" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="class_f_o_c_driver_1a8d0e3027ef04ecb52f148dee5dd947d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FOCDriver::updateTemp</definition>
+        <argsstring>()</argsstring>
+        <name>updateTemp</name>
+        <qualifiedname>FOCDriver::updateTemp</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/FOCDriver.h" line="67" column="10" bodyfile="src/FOCDriver.cpp" bodystart="162" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="class_f_o_c_driver_1abc0ed6d07f1a69ec1779bf773911bbaf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FOCDriver::updateAlphaVelocity</definition>
+        <argsstring>()</argsstring>
+        <name>updateAlphaVelocity</name>
+        <qualifiedname>FOCDriver::updateAlphaVelocity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/FOCDriver.h" line="68" column="10" bodyfile="src/FOCDriver.cpp" bodystart="153" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="class_f_o_c_driver_1a44e69da278198f0f525e184ef19d3838" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FOCDriver::updateBetaVelocity</definition>
+        <argsstring>()</argsstring>
+        <name>updateBetaVelocity</name>
+        <qualifiedname>FOCDriver::updateBetaVelocity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/FOCDriver.h" line="69" column="10" bodyfile="src/FOCDriver.cpp" bodystart="158" bodyend="160"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/FOCDriver.h" line="9" column="1" bodyfile="src/FOCDriver.h" bodystart="9" bodyend="71"/>
+    <listofallmembers>
+      <member refid="class_f_o_c_driver_1a1111d23924e5a536fb75b815d57b96d9" prot="private" virt="non-virtual"><scope>FOCDriver</scope><name>alpha</name></member>
+      <member refid="class_f_o_c_driver_1a537c8d7e538f0c44d5f5fe85f4099185" prot="private" virt="non-virtual"><scope>FOCDriver</scope><name>alphaVelocity</name></member>
+      <member refid="class_f_o_c_driver_1a40473ba03358c64491f0084ec9e52886" prot="private" virt="non-virtual"><scope>FOCDriver</scope><name>beta</name></member>
+      <member refid="class_f_o_c_driver_1abe48cb011ca7bfd8bbf6af5bcbbfd283" prot="private" virt="non-virtual"><scope>FOCDriver</scope><name>betaVelocity</name></member>
+      <member refid="class_f_o_c_driver_1ab1b826fc0431334d2ae56a52b8b2d2ea" prot="private" virt="non-virtual"><scope>FOCDriver</scope><name>CAN</name></member>
+      <member refid="class_f_o_c_driver_1a58ee55ef00db62cc4918a5de6f72fdba" prot="public" virt="non-virtual"><scope>FOCDriver</scope><name>FOCDriver</name></member>
+      <member refid="class_f_o_c_driver_1a9dc0ba44bad942e2222fda4c05e99a60" prot="public" virt="non-virtual"><scope>FOCDriver</scope><name>FOCDriver</name></member>
+      <member refid="class_f_o_c_driver_1acfc1cdf72d4797ccee6e06d9c3275955" prot="public" virt="non-virtual"><scope>FOCDriver</scope><name>getAlpha</name></member>
+      <member refid="class_f_o_c_driver_1a513c44a5e190f833b0d87e55fbd129ec" prot="public" virt="non-virtual"><scope>FOCDriver</scope><name>getAlphaVelocity</name></member>
+      <member refid="class_f_o_c_driver_1a21f0cccda9de64867a2406be9118609f" prot="public" virt="non-virtual"><scope>FOCDriver</scope><name>getBeta</name></member>
+      <member refid="class_f_o_c_driver_1aa7ca59c78c21fbf4f852b3bb700bb82c" prot="public" virt="non-virtual"><scope>FOCDriver</scope><name>getBetaVelocity</name></member>
+      <member refid="class_f_o_c_driver_1aedd914e33e1a5a60281ba8af6dfafa2d" prot="public" virt="non-virtual"><scope>FOCDriver</scope><name>getMaxCurrent</name></member>
+      <member refid="class_f_o_c_driver_1ada27a8bb717c2010d22c06877f240688" prot="public" virt="non-virtual"><scope>FOCDriver</scope><name>getMaxTemp</name></member>
+      <member refid="class_f_o_c_driver_1a45948110b2ad223aa20a1c05ba36bd23" prot="public" virt="non-virtual"><scope>FOCDriver</scope><name>getPolePairs</name></member>
+      <member refid="class_f_o_c_driver_1ac0e0183bf65c6d87557a5069a47e50bf" prot="public" virt="non-virtual"><scope>FOCDriver</scope><name>getResistance</name></member>
+      <member refid="class_f_o_c_driver_1a01e4c37945f0cd0b95a8cceea9ea5c1e" prot="public" virt="non-virtual"><scope>FOCDriver</scope><name>getTargetForce</name></member>
+      <member refid="class_f_o_c_driver_1a9993ed73aab32e075815a338ec03e361" prot="public" virt="non-virtual"><scope>FOCDriver</scope><name>getTorqueConstant</name></member>
+      <member refid="class_f_o_c_driver_1aafee5c00cea897463c73d72d8788d210" prot="private" virt="non-virtual"><scope>FOCDriver</scope><name>ID</name></member>
+      <member refid="class_f_o_c_driver_1a4db49a5d5f4db50229d42f0ff91f633a" prot="public" virt="non-virtual"><scope>FOCDriver</scope><name>init</name></member>
+      <member refid="class_f_o_c_driver_1acbeabccaf24756a3edeec3e2f6431fe3" prot="private" virt="non-virtual"><scope>FOCDriver</scope><name>maxCurrent</name></member>
+      <member refid="class_f_o_c_driver_1a855457bb773f45e73016ba5b7b70a9f6" prot="private" virt="non-virtual"><scope>FOCDriver</scope><name>maxTemp</name></member>
+      <member refid="class_f_o_c_driver_1af9fb840cdf26e0ae3fc51538a7f0ad00" prot="private" virt="non-virtual"><scope>FOCDriver</scope><name>polePairs</name></member>
+      <member refid="class_f_o_c_driver_1a4b5e2c94a690ec28e43b1b4afb9a856d" prot="private" virt="non-virtual"><scope>FOCDriver</scope><name>resistance</name></member>
+      <member refid="class_f_o_c_driver_1a01fbf2f5d270b96fc3fe131838bc4837" prot="public" virt="non-virtual"><scope>FOCDriver</scope><name>run</name></member>
+      <member refid="class_f_o_c_driver_1a3037a5515ba8f7c70af9899fdbf9a1bb" prot="private" virt="non-virtual"><scope>FOCDriver</scope><name>sendMessage</name></member>
+      <member refid="class_f_o_c_driver_1a9f81cf0e55e40efec0e388a1260f46ab" prot="private" virt="non-virtual"><scope>FOCDriver</scope><name>sendMessage</name></member>
+      <member refid="class_f_o_c_driver_1a391ad9eb21af9bfeca0c62404050366b" prot="private" virt="non-virtual"><scope>FOCDriver</scope><name>sendMessage</name></member>
+      <member refid="class_f_o_c_driver_1ab3aa9617cfa31896d90bfe76887c0e6f" prot="public" virt="non-virtual"><scope>FOCDriver</scope><name>setAlpha</name></member>
+      <member refid="class_f_o_c_driver_1a0a28c59208c3ac68bf93bc9a6c72cb5e" prot="public" virt="non-virtual"><scope>FOCDriver</scope><name>setMaxCurrent</name></member>
+      <member refid="class_f_o_c_driver_1a60a4b4cf21dc117a981268ce7e1fad65" prot="public" virt="non-virtual"><scope>FOCDriver</scope><name>setMaxTemp</name></member>
+      <member refid="class_f_o_c_driver_1a7b4785d15a3f72e824b1ee9f67bc4baf" prot="public" virt="non-virtual"><scope>FOCDriver</scope><name>setMotorParams</name></member>
+      <member refid="class_f_o_c_driver_1ad18066d1a1d2e7e514a0f4ff97e67b4d" prot="public" virt="non-virtual"><scope>FOCDriver</scope><name>setTargetForce</name></member>
+      <member refid="class_f_o_c_driver_1adc90f3e0515bb5d2e9cc1742eab2656e" prot="private" virt="non-virtual"><scope>FOCDriver</scope><name>targetForce</name></member>
+      <member refid="class_f_o_c_driver_1a5fbd17e908f480490bea7f189df92ee3" prot="private" virt="non-virtual"><scope>FOCDriver</scope><name>temp</name></member>
+      <member refid="class_f_o_c_driver_1ab9a9ecc86fdb3da7394e5d3f14b52206" prot="private" virt="non-virtual"><scope>FOCDriver</scope><name>TorqueConstant</name></member>
+      <member refid="class_f_o_c_driver_1af491dbbbaa68da53da813c03a9f3425d" prot="public" virt="non-virtual"><scope>FOCDriver</scope><name>updateAlpha</name></member>
+      <member refid="class_f_o_c_driver_1abc0ed6d07f1a69ec1779bf773911bbaf" prot="public" virt="non-virtual"><scope>FOCDriver</scope><name>updateAlphaVelocity</name></member>
+      <member refid="class_f_o_c_driver_1aafabae9c6391883fcc2cec90630edc7b" prot="public" virt="non-virtual"><scope>FOCDriver</scope><name>updateBeta</name></member>
+      <member refid="class_f_o_c_driver_1a44e69da278198f0f525e184ef19d3838" prot="public" virt="non-virtual"><scope>FOCDriver</scope><name>updateBetaVelocity</name></member>
+      <member refid="class_f_o_c_driver_1a8d0e3027ef04ecb52f148dee5dd947d4" prot="public" virt="non-virtual"><scope>FOCDriver</scope><name>updateTemp</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
